@@ -29,3 +29,40 @@
 # the comp (I) chose dynamite
 # I REALLY WIN!
 #-------------------------------------------------------------------------------
+import random
+
+# Predefined output messages
+TIE = "Nobody wins. It's a TIE!"
+USER_WIN = 'You win...'
+COMP_WIN = 'Ha! I WIN!'
+
+# Get user's and computer's choice
+user = raw_input('Choose your weapon: ')
+comp = random.choice( ['rock', 'paper', 'scissors'])
+
+# Determine and print the results
+print 'the user (you) chose', user
+print 'the comp (I) chose', comp
+
+if comp == 'rock':
+    if user == 'rock':
+        print TIE
+    elif user == 'paper':
+        print USER_WIN
+    else:
+        print COMP_WIN
+elif comp == 'paper':
+    if user == 'rock':
+        print COMP_WIN
+    elif user == 'paper':
+        print TIE
+    else:
+        print USER_WIN
+# The else implies that the computer chose scissors
+else:
+    if user == 'rock':
+        print USER_WIN
+    elif user == 'paper':
+        print COMP_WIN
+    else:
+        print TIE
